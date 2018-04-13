@@ -6,38 +6,187 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:layout_margin="16dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="250dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOCATION"
-        android:id="@+id/btn_location"/>
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="WRITE EXSTORAGE"
-        android:id="@+id/btn_writestorage"/>
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="READ EXSTORAGE"
-        android:id="@+id/btn_readstorage"/>
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="CALL"
-        android:id="@+id/btn_call"/>
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="CAMERA"
-        android:id="@+id/btn_camera"/>
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="GET ACCOUNT"
-        android:id="@+id/btn_account"/>
+        android:text="OUTPUT"
+        android:id="@+id/tv_data"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#e8e8e8"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write SDCard"
+            android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="File Name : "/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="File name please...(Exm: data.txt)"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:id="@+id/edt_filename"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Data :"/>
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please data..."
+            android:textStyle="italic"
+            android:id="@+id/edt_data"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="save sdcard(private)"
+        android:background="@drawable/circle_button"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:id="@+id/btn_save"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="save sdcard(public)"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_button"
+        android:textColor="#fff"
+        android:layout_marginTop="6dp"
+        android:id="@+id/btn_sdcardwritepublic"/></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="4dp"
+        android:background="#e8e8e8">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read SDCard"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="File Name :"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="File name please(Exm: data.txt)"
+                android:textSize="14sp"
+                android:id="@+id/edt_readfilename"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="read sdcard(private)"
+            android:background="@drawable/circle_button"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:id="@+id/btn_sdcardreadprivate"/>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="read sdcard(public)"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_button"
+            android:textColor="#fff"
+            android:layout_marginTop="6dp"
+            android:id="@+id/btn_sdcardreadpublic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:background="#e8e8e8"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shared Preferences"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data: "
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data please"
+                android:textStyle="italic"
+                android:id="@+id/edt_shareddata"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="save shared(private)"
+            android:background="@drawable/circle_button"
+            android:textColor="#fff"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"
+            android:id="@+id/btn_savesharedprivate"/>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="read shared(private)"
+            android:background="@drawable/circle_button"
+            android:textColor="#fff"
+            android:layout_marginTop="6dp"
+            android:id="@+id/btn_readsharedprivate"/>
+    </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
